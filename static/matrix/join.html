@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.js" integrity="sha512-dMiBqqEV5i3KqpAdsgQSSZ72DnNib7otY0X+b/Tnn1EmLym1dxuZ19csdZqBnfDniKd9bmNtzStQzuMrIa5Ngw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces&family=Noto+Sans&display=swap" rel="stylesheet">
+<style>
+#header{
+ background-image: url("/images/funni.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  color: black;
+  font-family: 'Fraunces', serif;
+}
+#content{
+font-family: 'Noto Sans', sans-serif;
+}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+
+<div id="header" style="text-align: center;"width="100%"><br><h1 style="background-color: white; font-size: 5em; opacity: .75;">Gareth Tacos Discord</h1><h2 style="background-color: white; font-size: 3em; opacity: .75;">Poopoo disco go brrrrrrrrrrrrrrrr.</h2><script src="/client-js/getver.js"></script></div>
+<div id="content" style="text-align: center;"><h2 style="font-size: 3em;">Fill up the form:</h2>
+<div id="alert-error" style=" display: none; background-color: red; color: white; font-size: 2em; opacity: .75;">
+<span class="material-icons" style="text-align: left;">
+close
+</span>  Invalid Email address! Cannot submit.</div>
+<ul style="list-style-type: none; font-size: 2em;">
+<form>
+  <h3>Email:</h3>
+  <input type="email" id="email" name="email" placeholder="Email.example@gmail.com" style="font-family: 'Noto Sans', sans-serif; font-size: 1em;padding: 0.5em;"><br><br>
+  <input type="button" onclick="emailee()" value="Submit"style="font-family: 'Noto Sans', sans-serif; font-size: 1em;padding: 0.5em;">
+</form> 
+<br>
+<li><a href="discord.html" style>back</a></li>
+</ul>
+<script>
+const myelement = document.getElementById("alert-error");
+function emailee(){
+let email = document.querySelector("#email").value;
+let isemail = validate(email);
+if(isemail){
+console.log(email)
+const xhttp = new XMLHttpRequest();
+myelement.style.display = "none";
+alert("http sent")
+ document.cookie = "haschecked=waiting";
+xhttp.open("POST", "/api/v1beta/", true);
+  xhttp.setRequestHeader("purpose", "email verification");
+xhttp.setRequestHeader("Token", key());
+xhttp.send(`haschecked=waiting&emailaddr=${email}`);
+ }else{
+     myelement.style.display = "block";
+ }
+}
+</script>
+<script src="/client-js/email-validate.js">
+</script>
+<script src="/client-js/ad-detect.js">
+</script>
+<script src="/client-js/resource-01.js">
+</script>
+</div>
+</body>
+</html>
+
