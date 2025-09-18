@@ -8,7 +8,7 @@ export default {
       fallback: 'index.html' // Optional: For SPA fallback
     }),
     paths: {
-      //base: '/<your-repo-name>' // e.g., '/indexsite-new'
+      base: '/indexsite-new' // e.g., '/indexsite-new'
     }
   }
 };
