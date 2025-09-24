@@ -1,6 +1,6 @@
 // src/routes/api/todos/+server.js
 import { json } from '@sveltejs/kit';
-
+export const prerender = true;
 // In a real app, you'd connect to a database
 const todos = {"status": "SVELTE REWRITEEEE YAYAAAAYYYYY", "version": "0.1.0-SV-BETA"};
 
