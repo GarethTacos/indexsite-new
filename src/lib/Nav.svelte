@@ -8,4 +8,5 @@
 	<li><a href="{base}/minigames">Minigames</a></li>
 	<li><a href="{base}/forums">Forums</a></li>
 	<li><a href="{base}/matrix">Matrix Room</a></li>
+	<li><a href="{base}/config">Config</a></li>
 </ul>
